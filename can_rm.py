@@ -41,8 +41,9 @@ class CANRM():
 
     def get_raw_speed(self):
         speed = self.node.sdo[0x6030][0x1].raw
+        speed = self.node.sdo[0x3011][0x1].raw
         return speed
-
+    
     def dimensionate(self):
         print("Esto te permitirá dimensionar el sensor para la distancia de funcionamiento")
         r = float(input("Inserta el radio final en cm: "))
