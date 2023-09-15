@@ -10,8 +10,8 @@ can_rm = CANRM(PORT, SENSOR_ID)
 # calibrating
 # can_jd.calibrate_slopes()
 
-print(can_rm.dimensionate())
-# can_rm.activate_speed()
+#print(can_rm.dimensionate())
+can_rm.activate_speed()
 # Acclerations
 try:
     while True:

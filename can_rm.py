@@ -39,7 +39,7 @@ class CANRM():
         self.node.sdo[0x3010][0x1].raw = 0x0
         print("Speed deactivated")
 
-    def get_speed(self):
+    def get_raw_speed(self):
         speed = self.node.sdo[0x6030][0x1].raw
         return speed
 
