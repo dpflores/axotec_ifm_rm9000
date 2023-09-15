@@ -37,7 +37,7 @@ class CANRM():
 
     def dimensionate(self):
         print("Esto te permitirá dimensionar el sensor para la distancia de funcionamiento")
-        r = input("Inserta el radio final de la aplicación en cm")
+        r = float(input("Inserta el radio final en cm: "))
         max_rev = self.measure_range/self.steps_per_revolution
         max_dist = max_rev*2*PI*r/100
         print("\n Datos calculados")
