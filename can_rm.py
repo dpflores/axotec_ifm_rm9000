@@ -35,7 +35,7 @@ class CANRM():
         speed = self.node.sdo[0x6030].raw
         return speed
 
-    def dimensionate():
+    def dimensionate(self):
         print("Esto te permitirá dimensionar el sensor para la distancia de funcionamiento")
         r = input("Inserta el radio final de la aplicación en cm")
         max_rev = self.measure_range/self.steps_per_revolution
