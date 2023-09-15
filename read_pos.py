@@ -11,9 +11,13 @@ can_rm = CANRM(PORT, SENSOR_ID)
 # can_jd.calibrate_slopes()
 
 print(can_rm.dimensionate())
+can_rm.activate_speed()
 # Acclerations
-while True:
-    pos = can_rm.get_speed()
+try:
+    while True:
+        pos = can_rm.get_speed()
 
-    print(f'{{"Vel":{round(pos,4)}}}')
-    time.sleep(0.1)
+        print(f'{{"Vel":{round(pos,4)}}}')
+        time.sleep(0.1)
+except:
+    can_rm.deactivate_speed()
