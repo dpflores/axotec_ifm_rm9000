@@ -6,6 +6,7 @@ SENSOR_ID = 10
 
 
 can_rm = CANRM(PORT, SENSOR_ID)
+can_rm.deactivate_speed()
 
 while True:
     pos = can_rm.get_raw_position()
