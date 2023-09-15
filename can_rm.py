@@ -17,7 +17,7 @@ class CANRM():
         
 
     def get_raw_position(self):
-        pos = self.node.sdo[0x2000].raw
+        pos = self.node.sdo[0x6004].raw
         return pos
 
     def get_rev_position(self):
