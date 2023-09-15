@@ -32,7 +32,7 @@ class CANRM():
         return rad_pos
 
     def get_speed(self):
-        speed = self.node.sdo[0x6030].raw
+        speed = self.node.sdo[0x6030][0x01].raw
         return speed
 
     def dimensionate(self):
