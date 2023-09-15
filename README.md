@@ -5,7 +5,7 @@ Verificar el ID del nodo también, por defecto es 32
 Para instalar los requerimientos en el dispositivo ejecutar 
 
 ```
-python3 setupy.py
+python3 setup.py
 ```
 
 
