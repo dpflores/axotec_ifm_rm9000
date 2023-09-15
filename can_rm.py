@@ -45,7 +45,7 @@ class CANRM():
         return speed
 
     def get_rpm_speed(self):
-        rpm = self.get_raw_position()*self.steps_per_revolution*60
+        rpm = self.get_raw_speed()*self.steps_per_revolution*60
         return rpm
 
     def dimensionate(self):
