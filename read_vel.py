@@ -7,12 +7,12 @@ SENSOR_ID = 10
 
 can_rm = CANRM(PORT, SENSOR_ID)
 
-# calibrating
-# can_jd.calibrate_slopes()
+can_rm.activate_speed()
+try:
+    while True:
+        speed = can_rm.get_rpm_speed()
 
-# Acclerations
-while True:
-    speed = can_rm.get_rpm_speed()
-
-    print(f'{{"Vel":{round(speed,4)}}}')
-    time.sleep(0.1)
+        print(f'{{"Vel":{round(speed,4)}}}')
+        time.sleep(0.1)
+except:
+    can_rm.deactivate_speed()
