@@ -33,7 +33,7 @@ class CANRM():
 
     def activate_speed(self):
         print(self.node.sdo[0x3010][1])
-        self.node.sdo[0x3010][0x1] = 1
+        self.node.sdo[0x3010][1] = 1
         print("Speed activated")
 
     def deactivate_speed(self):
