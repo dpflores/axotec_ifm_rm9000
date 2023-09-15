@@ -1,4 +1,5 @@
 import canopen
+import os
 
 EDS_FILE = os.path.dirname(os.path.realpath(__file__)) +\
     '/RM9000.eds'
