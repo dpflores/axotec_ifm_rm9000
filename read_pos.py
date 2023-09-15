@@ -10,11 +10,10 @@ can_rm = CANRM(PORT, SENSOR_ID)
 # calibrating
 # can_jd.calibrate_slopes()
 
+print(can_rm.dimensionate())
 # Acclerations
 while True:
-    print(can_rm.steps_per_revolution)
-    print(can_rm.get_measure_range())
-    pos = can_rm.get_rev_position()
+    pos = can_rm.get_speed()
 
-    print(f'{{"Position":{round(pos,4)}}}')
+    print(f'{{"Vel":{round(pos,4)}}}')
     time.sleep(0.1)
