@@ -22,11 +22,18 @@ class CANRM():
         network = canopen.Network()
         network.connect(bustype='socketcan', channel=port)
         self.node = network.add_node(node_id, EDS_FILE)
+        self.steps_per_revolution = self.node.sdo[0x6001].raw
         
 
-    def get_position(self):
+    def get_raw_position(self):
         pos = self.node.sdo[0x2000].raw
         return pos
+
+    def get_rev_position(self):
+        raw_pos = self.get_raw_position()
+        rev_pos = raw_pos/self.steps_per_revolution
+        return rev_pos
+
 
 
     def get_prop_accel(self):
