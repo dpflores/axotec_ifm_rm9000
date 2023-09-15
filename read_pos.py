@@ -13,6 +13,7 @@ can_rm = CANRM(PORT, SENSOR_ID)
 # Acclerations
 while True:
     print(can_rm.steps_per_revolution)
+    print(can_rm.get_measure_range())
     pos = can_rm.get_rev_position()
 
     print(f'{{"Position":{round(pos,4)}}}')
