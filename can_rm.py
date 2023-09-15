@@ -32,11 +32,11 @@ class CANRM():
         return rad_pos
 
     def activate_speed(self):
-        self.node.sdo[0x6002][0x1].write(0x1, fmt='raw')
+        self.node.sdo[0x6002]raw[0x1].write(0x1, fmt='raw')
         print("Speed activated")
 
     def deactivate_speed(self):
-        self.node.sdo[0x6002][0x1].write(0x0, fmt='raw')
+        self.node.sdo[0x6002]raw[0x1].write(0x0, fmt='raw')
         print("Speed deactivated")
 
     def get_speed(self):
