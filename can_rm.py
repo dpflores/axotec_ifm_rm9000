@@ -5,7 +5,7 @@ import os
 
 CALIBRATING_TIME = 5
 EDS_FILE = os.path.dirname(os.path.realpath(__file__)) +\
-    '/JD2xxx_v1.0.eds'
+    '/RM9000.eds'
 # Cargar archivo de configuración de dispositivo CANopen
 g = 9.81
 
