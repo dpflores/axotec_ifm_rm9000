@@ -22,11 +22,7 @@ class CANRM():
         network = canopen.Network()
         network.connect(bustype='socketcan', channel=port)
         self.node = network.add_node(node_id, EDS_FILE)
-        self.slope_resolution = slope_resolutions[str(
-            self.node.sdo[0x6000].raw)]
-        self.speed = speed0
-        self.slope_x = 0
-        self.slope_y = 0
+        
 
     def get_position(self):
         pos = self.node.sdo[0x2000].raw
