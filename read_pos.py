@@ -7,12 +7,8 @@ SENSOR_ID = 10
 
 can_rm = CANRM(PORT, SENSOR_ID)
 
-# calibrating
-# can_jd.calibrate_slopes()
-
-# Acclerations
 while True:
-    pos = can_rm.get_rev_position()
+    pos = can_rm.get_raw_position()
 
     print(f'{{"Position":{round(pos,4)}}}')
     time.sleep(0.1)
