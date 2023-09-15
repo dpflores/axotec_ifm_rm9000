@@ -40,8 +40,8 @@ class CANRM():
         print("Speed deactivated")
 
     def get_raw_speed(self):
-        speed = self.node.sdo[0x6030][0x1].raw
         print(self.node.sdo[0x3011][0x1].raw)
+        speed = self.node.sdo[0x6030][0x1].raw
         return speed
 
     def dimensionate(self):
