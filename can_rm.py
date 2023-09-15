@@ -24,6 +24,7 @@ class CANRM():
         return pos
 
     def get_rev_position(self):
+        # number of revolutions
         rev_pos = self.get_raw_position()/self.steps_per_revolution
         return rev_pos
 
@@ -40,9 +41,12 @@ class CANRM():
         print("Speed deactivated")
 
     def get_raw_speed(self):
-        print(self.node.sdo[0x3011].raw)
         speed = self.node.sdo[0x6030][0x1].raw
         return speed
+
+    def get_rpm_speed(self):
+        rpm = self.get_raw_position()*self.steps_per_revolution*60
+        return rpm
 
     def dimensionate(self):
         print("Esto te permitirá dimensionar el sensor para la distancia de funcionamiento")
