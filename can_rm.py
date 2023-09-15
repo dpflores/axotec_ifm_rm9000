@@ -1,9 +1,5 @@
 import canopen
-import numpy as np
-import time
-import os
 
-CALIBRATING_TIME = 5
 EDS_FILE = os.path.dirname(os.path.realpath(__file__)) +\
     '/RM9000.eds'
 
@@ -57,22 +53,3 @@ class CANRM():
         print("\n Datos calculados")
         print(f"Máximas revoluciones: {max_rev} rev")
         print(f"Máxima distancia: {max_dist} m")
-
-
-
-    # Funcion para calibrar el slope en x e y del JD y poder corregir la funcion get_slopes
-    def calibrate_slopes(self):
-        # obtener una media de 20 datos para hacer el promedio para calibrar
-        print("calibrating...")
-        x = 0
-        y = 0
-        for i in range(10*CALIBRATING_TIME):
-            x1, y1 = self.get_slopes()
-            x += x1
-            y += y1
-            time.sleep(0.01)
-        x = x/(10*CALIBRATING_TIME)
-        y = y/(10*CALIBRATING_TIME)
-
-        self.slope_x = x
-        self.slope_y = y
