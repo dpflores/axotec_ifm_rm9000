@@ -1,4 +1,4 @@
-from can_rm import *
+from can_rm import CANRM
 import time
 # CAN
 port = 'can1'
