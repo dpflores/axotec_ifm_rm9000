@@ -13,10 +13,8 @@ can_rm = CANRM(PORT, SENSOR_ID)
 #print(can_rm.dimensionate())
 can_rm.activate_speed()
 # Acclerations
-try:
-    while True:
-        pos = can_rm.get_raw_speed()
-        print(f'{{"Vel":{round(pos,4)}}}')
-        time.sleep(0.1)
-except:
-    can_rm.deactivate_speed()
+
+while True:
+    pos = can_rm.get_raw_speed()
+    print(f'{{"Vel":{round(pos,4)}}}')
+    time.sleep(0.1)
