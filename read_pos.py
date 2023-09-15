@@ -1,9 +1,11 @@
 from can_rm import CANRM
 import time
 # CAN
-port = 'can1'
-id = 32
-can_rm = CANRM(port, id)
+PORT = 'can1'
+SENSOR_ID = 10
+
+
+can_rm = CANRM(PORT, SENSOR_ID)
 
 # calibrating
 # can_jd.calibrate_slopes()
