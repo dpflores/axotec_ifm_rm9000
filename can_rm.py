@@ -41,6 +41,7 @@ class CANRM():
         print("Speed deactivated")
 
     def get_raw_speed(self):
+        # No se sabe todavia si la velocidad es steps/s asi que confirmar
         speed = self.node.sdo[0x6030][0x1].raw
         return speed
 
