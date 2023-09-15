@@ -17,7 +17,7 @@ class CANRM():
         
 
     def get_raw_position(self):
-        pos = self.node.sdo[0x6004].raw
+        pos = self.node.sdo[0x2000].raw
         return pos
 
     def get_rev_position(self):
@@ -35,6 +35,7 @@ class CANRM():
 
     def deactivate_speed(self):
         self.node.sdo[0x3010][0x1].raw = 0x0
+        print(self.node.sdo[0x3010][0x1].raw)
         print("Speed deactivated")
 
     def get_raw_speed(self):
